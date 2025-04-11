@@ -10,20 +10,15 @@ Function attack() akan menerima 1 parameter yaitu damage
 Karena attack akan dikurangi 2, maka setiap attack akan menghasilkan damage 8
 */
 
-function attack (damage) {
-    return damage-2;
+function attack(damage) {
+  return damage - 2;
+}
+function damageCalculation(numberOfAttacks, damagePerAttack) {
+  let damageAtck = attack(damagePerAttack);
+  return numberOfAttacks * damageAtck;
+}
 
-  }
-  
-  function damageCalculation (numberOfAttacks, damagePerAttack) {
-    let damageAtck = attack(damagePerAttack)
-    return numberOfAttacks*damageAtck
-  }
-  
-  // TEST CASE
-  console.log(damageCalculation(9, 25)); // 207
-  
-  console.log(damageCalculation(10, 4)); // 20
-  
-  console.log(damageCalculation(5, 20)); // 90
-  
+// TEST CASE
+console.log(damageCalculation(9, 25)); // 207
+console.log(damageCalculation(10, 4)); // 20
+console.log(damageCalculation(5, 20)); // 90
